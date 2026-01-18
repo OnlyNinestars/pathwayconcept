@@ -2,41 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IBM Quantum Intro</title>
+    <title>Quantum Learning Hub</title>
     <style>
-        body { 
-            font-family: sans-serif; 
-            max-width: 600px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
-        }
-        details { 
-            border: 1px solid #ccc; 
-            padding: 10px; 
-            margin-bottom: 10px; 
-            border-radius: 4px; 
-        }
-        summary { 
-            font-weight: bold; 
-            cursor: pointer; 
-        }
+        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; text-align: center; }
+        nav { margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        nav a { margin: 0 15px; text-decoration: none; color: #0062ff; font-weight: bold; }
+        .course-card { border: 1px solid #ccc; padding: 20px; margin: 20px 0; border-radius: 8px; transition: 0.3s; }
+        .course-card:hover { background: #f9f9f9; }
     </style>
 </head>
 <body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="intro.html">1. Intro to QI</a>
+    <a href="algorithms.html">2. Algorithms</a>
+    <a href="qml.html">3. Machine Learning</a>
+</nav>
 
-    <h1>IBM Quantum Intro</h1>
+<h1>My IBM Quantum Learning Hub</h1>
+<p>Select a pathway below to view resources and track progress.</p>
 
-    <details>
-        <summary>Unit 1: Single Systems</summary>
-        </details>
+<div class="course-card">
+    <h2>Basics of Quantum Information</h2>
+    <p>The foundation of qubits, circuits, and entanglement.</p>
+    <a href="intro.html">View Pathway →</a>
+</div>
 
-    <details>
-        <summary>Unit 2: Multiple Systems</summary>
-        </details>
+<div class="course-card">
+    <h2>Fundamentals of Quantum Algorithms</h2>
+    <p>Deutsch-Jozsa, Simon's, Grover's, and Shor's algorithms.</p>
+    <a href="algorithms.html">View Pathway →</a>
+</div>
 
-    <details>
-        <summary>Unit 3: Quantum Circuits</summary>
-        </details>
-
+<div class="course-card">
+    <h2>Quantum Machine Learning</h2>
+    <p>Encoding data, kernels, and variational circuits.</p>
+    <a href="qml.html">View Pathway →</a>
+</div>
 </body>
 </html>
