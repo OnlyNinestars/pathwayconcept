@@ -2,42 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quantum Learning Hub</title>
+    <title>UQA | Learning Hub</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; text-align: center; }
-        nav { margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        nav a { margin: 0 15px; text-decoration: none; color: #0062ff; font-weight: bold; }
-        .course-card { border: 1px solid #ccc; padding: 20px; margin: 20px 0; border-radius: 8px; transition: 0.3s; }
-        .course-card:hover { background: #f9f9f9; }
+        :root {
+            --bg-deep: #1c1f35;      /* Deep midnight navy background */
+            --bg-nav: #232742;       /* Slightly lighter navy for nav */
+            --accent-lavender: #a1a7ff; /* Soft lavender for main titles */
+            --accent-periwinkle: #7d84d1; /* Muted periwinkle for subtitles */
+            --text-main: #ffffff;
+            --card-border: rgba(161, 167, 255, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        nav {
+            width: 100%; padding: 20px 0;
+            background: var(--bg-nav);
+            text-align: center; border-bottom: 1px solid var(--card-border);
+        }
+
+        nav a { color: var(--text-main); text-decoration: none; margin: 0 20px; font-weight: 500; opacity: 0.8; }
+        nav a:hover { opacity: 1; color: var(--accent-lavender); }
+
+        .hero { padding: 80px 20px; text-align: center; }
+
+        h1 { font-size: 3.5rem; margin: 0; color: var(--text-main); }
+        .hero-accent { color: var(--accent-lavender); display: block; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; width: 90%; max-width: 1000px; padding: 40px 0; }
+
+        .course-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            padding: 30px; border-radius: 12px; text-decoration: none; color: white; transition: 0.3s;
+        }
+        .course-card:hover { border-color: var(--accent-lavender); background: rgba(161, 167, 255, 0.1); transform: translateY(-5px); }
+        .course-card h2 { margin: 0; font-size: 1.5rem; color: var(--accent-lavender); }
+        .course-card p { color: var(--accent-periwinkle); margin-top: 10px; font-size: 0.95rem; }
     </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html">Home</a>
-    <a href="intro.html">1. Intro to QI</a>
-    <a href="algorithms.html">2. Algorithms</a>
-    <a href="qml.html">3. Machine Learning</a>
+    <a href="intro.html">Intro to QI</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="qml.html">Machine Learning</a>
 </nav>
 
-<h1>My IBM Quantum Learning Hub</h1>
-<p>Select a pathway below to view resources and track progress.</p>
-
-<div class="course-card">
-    <h2>Basics of Quantum Information</h2>
-    <p>The foundation of qubits, circuits, and entanglement.</p>
-    <a href="intro.html">View Pathway →</a>
+<div class="hero">
+    <h1>Discover the Future of</h1>
+    <span class="hero-accent" style="font-size: 3.5rem; font-weight: bold; opacity: 0.8;">Quantum Learning</span>
 </div>
 
-<div class="course-card">
-    <h2>Fundamentals of Quantum Algorithms</h2>
-    <p>Deutsch-Jozsa, Simon's, Grover's, and Shor's algorithms.</p>
-    <a href="algorithms.html">View Pathway →</a>
+<div class="grid">
+    <a href="intro.html" class="course-card">
+        <h2>Intro to QI</h2>
+        <p>Master the foundations of qubits, gates, and single systems.</p>
+    </a>
+    <a href="algorithms.html" class="course-card">
+        <h2>Algorithms</h2>
+        <p>Explore Deutsch-Jozsa, Simon's, and Grover's search.</p>
+    </a>
+    <a href="qml.html" class="course-card">
+        <h2>Quantum ML</h2>
+        <p>Encoding data and building variational quantum circuits.</p>
+    </a>
 </div>
 
-<div class="course-card">
-    <h2>Quantum Machine Learning</h2>
-    <p>Encoding data, kernels, and variational circuits.</p>
-    <a href="qml.html">View Pathway →</a>
-</div>
 </body>
 </html>

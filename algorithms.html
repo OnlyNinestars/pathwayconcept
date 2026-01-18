@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UQA | Quantum Algorithms</title>
+    <style>
+        :root {
+            --bg-deep: #1c1f35;
+            --bg-nav: #232742;
+            --accent-lavender: #a1a7ff;
+            --accent-periwinkle: #7d84d1;
+            --text-main: #ffffff;
+            --card-border: rgba(161, 167, 255, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-deep); color: var(--text-main);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
+        }
+
+        nav {
+            width: 100%; padding: 20px 0; background: var(--bg-nav);
+            text-align: center; border-bottom: 1px solid var(--card-border); margin-bottom: 40px;
+        }
+
+        nav a { color: var(--text-main); text-decoration: none; margin: 0 20px; font-weight: 500; opacity: 0.8; }
+        nav a:hover { opacity: 1; color: var(--accent-lavender); }
+
+        .container { width: 90%; max-width: 850px; padding-bottom: 60px; }
+        h1 { font-size: 2.8rem; margin: 0; color: var(--text-main); }
+        .subtitle { color: var(--accent-periwinkle); font-size: 1.2rem; font-weight: 500; margin-bottom: 40px; }
+
+        details {
+            background: rgba(255, 255, 255, 0.04); border: 1px solid var(--card-border);
+            margin-bottom: 12px; border-radius: 8px; transition: 0.2s;
+        }
+
+        details:hover { border-color: var(--accent-lavender); background: rgba(255, 255, 255, 0.06); }
+
+        summary { padding: 20px; cursor: pointer; font-weight: 600; font-size: 1.15rem; color: var(--accent-lavender); outline: none; }
+
+        ul { padding: 5px 40px 25px 40px; margin: 0; }
+        li { margin-bottom: 18px; list-style: none; border-left: 2px solid var(--accent-periwinkle); padding-left: 15px; }
+        li strong { display: block; color: var(--accent-periwinkle); font-size: 0.8rem; text-transform: uppercase; }
+        li a { color: var(--text-main); text-decoration: none; font-size: 1rem; opacity: 0.9; }
+        li a:hover { opacity: 1; color: var(--accent-lavender); text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="intro.html">Intro to QI</a>
+    <a href="algorithms.html" style="color: var(--accent-lavender);">Algorithms</a>
+    <a href="qml.html">Machine Learning</a>
+</nav>
+
+<div class="container">
+    <h1>Quantum Algorithms</h1>
+    <p class="subtitle">Complete Learning Pathway: Quantum Coalition & IBM</p>
+
+    <details>
+        <summary>Unit 1: Query Complexity & Deutsch-Jozsa</summary>
+        <ul>
+            <li><strong>IBM Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms/quantum-query-algorithms">Quantum Query Algorithms</a></li>
+            <li><strong>Video</strong><a href="https://www.youtube.com/watch?v=5x3bw1sllIs">Qiskit: Deutsch-Jozsa Algorithm Deep Dive</a></li>
+            <li><strong>Reference</strong>Nielsen & Chuang: Chapter 6.1</li>
+            <li><strong>QC-LR Node</strong>Quantum Oracles & Black-box Models</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 2: Simon's Algorithm</summary>
+        <ul>
+            <li><strong>IBM Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms/simons-algorithm">Simon's Algorithm</a></li>
+            <li><strong>Textbook</strong><a href="https://learn.qiskit.org/course/algorithms/simons-algorithm">Qiskit: Simon's Problem and Solution</a></li>
+            <li><strong>Math</strong>Periodicity and Linear Systems over GF(2)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 3: Quantum Fourier Transform (QFT)</summary>
+        <ul>
+            <li><strong>IBM Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms/quantum-fourier-transform">The Quantum Fourier Transform</a></li>
+            <li><strong>Video</strong><a href="https://www.youtube.com/watch?v=mGqV6S_GClE">3Blue1Brown: The Fourier Transform</a></li>
+            <li><strong>Lab</strong>Implementing QFT in Qiskit</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 4: Phase Estimation</summary>
+        <ul>
+            <li><strong>IBM Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms/quantum-phase-estimation">Quantum Phase Estimation</a></li>
+            <li><strong>Theory</strong>Eigenvalues and Unitary Operators</li>
+            <li><strong>QC-LR Node</strong>Precision and Error Analysis in QPE</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 5: Grover's Search Algorithm</summary>
+        <ul>
+            <li><strong>IBM Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms/grovers-algorithm">Grover's Algorithm</a></li>
+            <li><strong>Visual</strong><a href="https://algassert.com/quirk">Interactive Amplitude Amplification in Quirk</a></li>
+            <li><strong>Reference</strong>Search in Unstructured Databases</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 6: Shor's Factoring Algorithm</summary>
+        <ul>
+            <li><strong>IBM Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms/shors-algorithm">Shor's Algorithm</a></li>
+            <li><strong>Paper</strong><a href="https://arxiv.org/abs/quant-ph/9508027">Shor's Original Paper (arXiv)</a></li>
+            <li><strong>Math</strong>Continued Fractions and Order Finding</li>
+        </ul>
+    </details>
+</div>
+</body>
+</html>

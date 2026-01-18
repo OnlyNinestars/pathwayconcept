@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UQA | Intro to Quantum Information</title>
+    <style>
+        :root {
+            --bg-deep: #1c1f35;          /* Deep midnight navy background from image */
+            --bg-nav: #232742;           /* Navigation bar background */
+            --accent-lavender: #a1a7ff;   /* Soft lavender for headers */
+            --accent-periwinkle: #7d84d1; /* Muted periwinkle for subtitles */
+            --text-main: #ffffff;        /* Main white text */
+            --card-border: rgba(161, 167, 255, 0.2);
+            --card-bg: rgba(255, 255, 255, 0.04); /* Transparent card style */
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* Navigation matches UQA main nav style */
+        nav {
+            width: 100%; padding: 20px 0;
+            background: var(--bg-nav);
+            text-align: center; border-bottom: 1px solid var(--card-border);
+            margin-bottom: 40px;
+        }
+
+        nav a { color: var(--text-main); text-decoration: none; margin: 0 20px; font-weight: 500; opacity: 0.8; }
+        nav a:hover { opacity: 1; color: var(--accent-lavender); }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            padding-bottom: 60px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.8rem; margin: 0; color: var(--text-main); }
+        .subtitle { color: var(--accent-periwinkle); font-size: 1.2rem; font-weight: 500; }
+
+        /* Dropdowns styled after UQA "Who We Are" section */
+        details {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            margin-bottom: 15px; border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        details:hover {
+            border-color: var(--accent-lavender);
+            background: rgba(161, 167, 255, 0.08);
+        }
+
+        summary {
+            padding: 20px; cursor: pointer; font-weight: 600;
+            font-size: 1.15rem; list-style: none; color: var(--accent-lavender);
+            outline: none;
+        }
+
+        /* Full list of sources mapped from Quantum Coalition Graph */
+        ul { padding: 5px 40px 25px 40px; margin: 0; }
+        li {
+            margin-bottom: 18px; list-style: none;
+            border-left: 2px solid var(--accent-periwinkle);
+            padding-left: 15px;
+        }
+
+        li strong { display: block; color: var(--accent-periwinkle); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;}
+
+        li a { color: var(--text-main); text-decoration: none; font-size: 1rem; opacity: 0.9; }
+        li a:hover { opacity: 1; color: var(--accent-lavender); text-decoration: underline; }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="intro.html" style="color: var(--accent-lavender);">Intro to QI</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="qml.html">Machine Learning</a>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Intro to Quantum Information</h1>
+        <p class="subtitle">Comprehensive resources from the Quantum Coalition Learning Graph</p>
+    </header>
+
+    <details>
+        <summary>Unit 1: Single Systems & Mathematical Foundations</summary>
+        <ul>
+            <li><strong>IBM Official Course</strong><a href="https://learning.quantum.ibm.com/course/basics-of-quantum-information/single-systems">Basics of Single Systems</a></li>
+            <li><strong>Math Prerequisite</strong><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3Blue1Brown: Essence of Linear Algebra</a></li>
+            <li><strong>Video Lecture</strong><a href="https://www.youtube.com/watch?v=0Av89fZenSY">John Watrous: Introduction & Mathematical Framework</a></li>
+            <li><strong>Reference Node</strong><a href="https://quantum-country.com/qcvc">Quantum Country: Quantum Computing for the Very Curious</a></li>
+            <li><strong>Graph Node</strong>Bra-ket Notation & Vector Spaces</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 2: Multiple Systems & Entanglement</summary>
+        <ul>
+            <li><strong>IBM Official Course</strong><a href="https://learning.quantum.ibm.com/course/basics-of-quantum-information/multiple-systems">Multiple Systems & State Vectors</a></li>
+            <li><strong>Textbook</strong><a href="https://learn.qiskit.org/course/introduction/multiple-qubits-and-entangled-states">Qiskit: Multiple Qubits and Entangled States</a></li>
+            <li><strong>Practical Lab</strong><a href="https://quantum-computing.ibm.com/composer">IBM Quantum Composer: Building Bell States</a></li>
+            <li><strong>Standard Reference</strong>Nielsen & Chuang: Chapter 2 (Postulates of Quantum Mechanics)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 3: Quantum Circuits & Gates</summary>
+        <ul>
+            <li><strong>IBM Official Course</strong><a href="https://learning.quantum.ibm.com/course/basics-of-quantum-information/quantum-circuits">Quantum Circuit Fundamentals</a></li>
+            <li><strong>Simulation Tool</strong><a href="https://algassert.com/quirk">Quirk: Interactive Quantum Circuit Simulator</a></li>
+            <li><strong>Coding Practice</strong><a href="https://github.com/Qiskit/qiskit-tutorials">Qiskit Tutorials: Building Circuits Programmatically</a></li>
+            <li><strong>Graph Node</strong>Universal Gate Sets (Hadamard, CNOT, T-Gate)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 4: Quantum Protocols (Teleportation & Key Distribution)</summary>
+        <ul>
+            <li><strong>IBM Official Course</strong><a href="https://learning.quantum.ibm.com/course/basics-of-quantum-information/entanglement-in-action">Entanglement in Action: Teleportation & Superdense Coding</a></li>
+            <li><strong>Security Reference</strong><a href="https://quantum-coalition-learning-resource.vercel.app/graph">QC-LR: BB84 Protocol & Quantum Key Distribution</a></li>
+            <li><strong>Visual Guide</strong>Quantum Teleportation Explained with Circuit Diagrams</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Unit 5: Introduction to Quantum Algorithms</summary>
+        <ul>
+            <li><strong>IBM Official Course</strong><a href="https://learning.quantum.ibm.com/course/fundamentals-of-quantum-algorithms">Introduction to Quantum Algorithms</a></li>
+            <li><strong>Algorithm Node</strong><a href="https://learn.qiskit.org/course/algorithms/deutsch-jozsa-algorithm">Qiskit: Deutsch-Jozsa Algorithm</a></li>
+            <li><strong>Primary Source</strong><a href="https://arxiv.org/abs/2507.11536">John Watrous: Lecture Notes on Introduction to Algorithms</a></li>
+            <li><strong>Graph Node</strong>Simon's Algorithm & Exponential Speedup Proofs</li>
+        </ul>
+    </details>
+</div>
+
+</body>
+</html>
